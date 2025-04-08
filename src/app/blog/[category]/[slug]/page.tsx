@@ -9,10 +9,9 @@ interface BlogPostPageProps {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  // Await the params object before destructuring its properties
-  const { category, slug } = await params;
+  // Wrap params in a resolved promise so that we can await it
+  const { category, slug } = await Promise.resolve(params);
 
-  // Get the blog post content
   const { meta, content } = await getPostBySlug(category, slug);
 
   return (
