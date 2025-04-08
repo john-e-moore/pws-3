@@ -9,7 +9,7 @@ interface BlogPostPageProps {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { category, slug } = params;
+  const { category, slug } = await params;
   const { meta, content } = await getPostBySlug(category, slug);
 
   return (
