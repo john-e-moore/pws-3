@@ -1,4 +1,5 @@
 import { getPostBySlug } from '@/lib/blog';
+import Link from 'next/link';
 
 interface BlogPostPageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -10,7 +11,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <article>
       <h1>{meta.title}</h1>
-      <p>{meta.date}</p>
+      <p
+        className="post-date"
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <span>{meta.date}</span>
+        <Link href="/">see all posts</Link>
+      </p>
       {meta.image && (
         <img
           src={`/blog_posts/${meta.category}/${meta.image}`}
