@@ -1,4 +1,3 @@
-// src/app/blog/[category]/[slug]/page.tsx
 import { getPostBySlug } from '@/lib/blog';
 
 interface BlogPostPageProps {
@@ -9,9 +8,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { category, slug } = await params;
   const { meta, content } = await getPostBySlug(category, slug);
   return (
-    <article>
+    <article style={{ lineHeight: 1.5 }}>
       <h1>{meta.title}</h1>
-      <p>{meta.date}</p>
+      <h3>{meta.date}</h3>
       {meta.image && (
         <img
           src={`/blog_posts/${meta.category}/${meta.image}`}

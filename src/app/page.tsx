@@ -1,4 +1,4 @@
-// app/page.tsx
+// src/app/page.tsx
 import { getAllPosts } from '@/lib/blog';
 import Link from 'next/link';
 
@@ -8,12 +8,19 @@ export default async function HomePage() {
   return (
     <>
       {posts.map((post) => (
-        <div key={`${post.category}-${post.slug}`}>
-          <p>{post.date}</p>
-          <Link href={`/blog/${post.category}/${post.slug}`}>
-            {post.title}
-          </Link>
-        </div>
+        <Link key={`${post.category}-${post.slug}`} href={`/blog/${post.category}/${post.slug}`}>
+          <div className="post-preview">
+            <h3 className="post-date">{post.date}</h3>
+            {post.image && (
+              <img
+                src={`/blog_posts/${post.category}/${post.image}`}
+                alt={post.title}
+                className="post-preview-image"
+              />
+            )}
+            <h2 className="post-title">{post.title}</h2>
+          </div>
+        </Link>
       ))}
     </>
   );

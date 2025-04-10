@@ -72,3 +72,39 @@ nav .right button {
   height: auto;
   margin-bottom: 1rem;
 }
+
+.post-preview {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  background-color: var(--bg-color);
+}
+
+.post-preview:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-preview img.post-preview-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Remove underline from any links inside a blog post preview */
+.post-preview a,
+.post-preview a:visited,
+.post-preview a:hover,
+.post-preview a:active {
+  text-decoration: none;
+}
+
+.post-title,
+.post-date {
+  text-decoration: none;
+}
+
