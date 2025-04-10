@@ -1,12 +1,13 @@
 // src/app/blog/[category]/[slug]/page.tsx
 import { getPostBySlug } from '@/lib/blog';
 
-export default async function BlogPostPage({ params }: { params: any }) {
-  // Await the params in case they are thenable.
-  const { category, slug } = await Promise.resolve(params);
+interface BlogPostPageProps {
+  params: Promise<{ category: string; slug: string }>;
+}
 
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { category, slug } = await params;
   const { meta, content } = await getPostBySlug(category, slug);
-
   return (
     <article>
       <h1>{meta.title}</h1>
