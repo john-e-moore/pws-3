@@ -108,3 +108,18 @@ nav .right button {
   text-decoration: none;
 }
 
+/* This makes all images within articles responsive */
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* OR, if you wrap the markdown content in a specific class, use that instead */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
