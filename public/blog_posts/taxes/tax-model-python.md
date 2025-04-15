@@ -1,6 +1,6 @@
 ---
 title: "Modeling Income Tax Policy Changes with Python (and without libraries or tax microdata)"
-date: "2025-04-10"
+date: "2025-04-08"
 image: "images/tax-return-class.png" 
 ---
 

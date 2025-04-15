@@ -1,7 +1,7 @@
 ---
-title: "Social Security Benefits Taxation"
-date: "2025-04-08"
-image: "images/shadowy-tax-adjuster.png"
+title: "Income Tax Policy Changes #1 - Social Security Benefits"
+date: "2025-04-15"
+image: "images/shadowy-tax-adjuster-3.png"
 ---
 
 ## Overview
@@ -16,7 +16,7 @@ A brilliant proposal from my boss that accomplishes a rhetorical win without bre
 
 ![Table](/blog_posts/taxes/images/changing-thresholds-table.png)
 
-What is the hit to the trust fund? After some number crunching of the IRS Statistics of Income tables we found this:
+What is the hit to the trust fund? After some number crunching using [the stuff we set up in my previous post](/blog/taxes/tax-model-python) we found this:
 
 ![Chart](/blog_posts/taxes/images/changing-thresholds-chart.png)
 
