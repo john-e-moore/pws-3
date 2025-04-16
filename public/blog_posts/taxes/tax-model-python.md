@@ -23,7 +23,7 @@ Okay, how do we tackle this? Remember we want to be able to query these tables, 
 * These tables are not in a uniform format. To get them from source format to target format we will need to do some parsing and transformation. (Most of the time AI tools are awesome at this---just upload the source data and tell it the output format you want---but these tables are so ugly I had to get more hands-on than I wanted to.)
 * There's no great way to name these tables concisely, so I decide to stick with the IRS table numbers (e.g. Table 3.2, Table 1.4A) and include a glossary file. Think a JSON or YML file with descriptors for each table.
 
-This wrangling of non-uniform table formats is the most tedious and by far the most time consuming step. A friend of mine once signed up for a data science bootcamp and immediately withdrew when he realized that cleaning / wrangling was 80 percent of the work. You need a dash of autistic firepower for this line of work.
+This wrangling of non-uniform table formats is the most tedious and by far the most time consuming step. A friend of mine once signed up for a data science bootcamp and immediately withdrew when he realized that cleaning / wrangling was 80 percent of the work. In the words of Ronnie Coleman, "Everybody wanna be a bodybuilder, but don't nobody wanna lift this heavy ass weight!" 
 
 These datasets are released once per year, so there's no need for any streaming or automation or anything fancy. Just outline your data model, create the database, and run the ingest script.
 
