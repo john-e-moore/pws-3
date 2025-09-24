@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT o3 and o4-mini Release: Terminal Wordle with Recommendation Engine"
 date: "2025-04-17"
-image: "images/terminal-wordle-enjoy.png" 
+image: "images/terminal-wordle-enjoy-light.png" 
 ---
 
 Nailed it after 1 minute 55 seconds of thought! What a time to be alive.
