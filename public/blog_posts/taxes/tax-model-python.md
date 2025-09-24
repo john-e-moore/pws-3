@@ -1,7 +1,7 @@
 ---
 title: "Modeling Income Tax Policy Changes with Python"
 date: "2025-04-08"
-image: "images/tax-return-class.png" 
+image: "images/tax-return-class-light.png" 
 ---
 
 ## Introduction
