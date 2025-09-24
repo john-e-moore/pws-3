@@ -1,5 +1,5 @@
 ---
-title: "Income Tax Policy Changes #1 - Social Security Benefits"
+title: "Income Tax Policy Changes #1: Social Security Benefits"
 date: "2025-04-15"
 image: "images/shadowy-tax-adjuster-3.png"
 ---

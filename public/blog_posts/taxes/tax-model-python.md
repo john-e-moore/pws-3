@@ -1,13 +1,13 @@
 ---
-title: "Modeling Income Tax Policy Changes with Python (and without libraries or tax microdata)"
+title: "Modeling Income Tax Policy Changes with Python"
 date: "2025-04-08"
 image: "images/tax-return-class.png" 
 ---
 
 ## Introduction
-At our economic consulting firm, one of the things we need to do is ballpark the fiscal effects of income tax policy changes. A lot of these tasks rhyme---instead of whipping up Excel sheets or Python scripts a la carte, it pays to set up some infrastructure. Chiefly, two things: a way to quickly query income tax data, and a way to run simulations with changeable parameters.
+At our economic consulting firm, one of the things we do is ballpark the fiscal effects of income tax policy changes. A lot of these tasks rhyme---instead of whipping up Excel sheets or Python scripts a la carte, it pays to set up some infrastructure. Primarily, two things: a way to quickly query income tax data, and a way to run simulations with changeable parameters.
 
-I want to use this post to stream-of-thought my approach so far. This is partially for selfish reasons (it is really easy to forget what you did on an old project). But I know many struggle with open-ended tasks (when the "how" isn't neatly laid out) and so I hope the reader gets something from this as well.
+I want to use this post to stream-of-thought my approach so far. This is partially for selfish reasons (it is really easy to forget what you did on an old project). But I hope I can also impart on you the the reader how I approach an open-ended task like this.
 
 ## Data Ingest
 Unlike government organizations and some academic institutions, we do not have IRS microdata to work with. They sell it but unfortunately the latest data is from tax year 2015. So we use the next best thing: IRS Statistics of Income (SOI) tables. These provide aggregates grouped by dimensions like AGI bracket, filing status, state, tax line items, and more. This is what they look like:
@@ -28,7 +28,7 @@ This wrangling of non-uniform table formats is the most tedious and by far the m
 These datasets are released once per year, so there's no need for any streaming or automation or anything fancy. Just outline your data model, create the database, and run the ingest script.
 
 ## Tax Return Object
-The most popular Python library for working with data is Pandas. The main object Pandas defines is a DataFrame---basically a table---with tons of methods for grouping, sorting, merging, etc. Pandas is great for most simple analyses. And like it or not, when you are doing a project that you plan on sharing with others who may not have your coding skills, you want to make your work as simple and accessible as possible. There is usually no need complicate things by starting from scratch or using lesser known libraries.
+The most popular Python library for working with data is Pandas. The main object Pandas defines is a DataFrame---basically a table---with tons of methods for grouping, sorting, merging, etc. Pandas is great for most simple analyses. And like it or not, when you are doing a project that you plan on sharing with others who may not have your coding skills, it is important to make your work as simple and accessible as possible. There is usually no need complicate things by starting from scratch or using lesser known libraries.
 
 However, Byzantine tax computations offer a perfect excuse to define a TaxReturn class. The detailed rules and conditional logic would make the Pandas code a nightmare to understand much less update. Instead of pulling from DataFrames with marginal rates, deductions, and credits, and defining a mess of custom functions to perform calculations on those DataFrame columns, all of that can be handled by TaxReturn attributes and methods on an individual basis.
 

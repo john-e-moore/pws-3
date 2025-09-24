@@ -4,7 +4,7 @@ date: "2025-04-17"
 image: "images/terminal-wordle-enjoy.png" 
 ---
 
-Nailed it after 1 minute 55 seconds of thought. Nice!
+Nailed it after 1 minute 55 seconds of thought! What a time to be alive.
 
 ## Prompt
 
