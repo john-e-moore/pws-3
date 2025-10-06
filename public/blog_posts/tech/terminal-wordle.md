@@ -4,7 +4,9 @@ date: "2025-04-17"
 image: "images/terminal-wordle-enjoy-light.png" 
 ---
 
-Nailed it after 1 minute 55 seconds of thought! What a time to be alive.
+I use AI to assist with my coding. The progress since late 2022 when ChatGPT 3.5 dropped has been nothing short of astounding. When labs drop new highly-touted models I like to see what they can do. 
+
+This time I wrote a pretty short prompt to create a terminal-based version of the popular game Wordle. The model nailed it after 1 minute 55 seconds of thought! What a time to be alive.
 
 ## Prompt
 ```
