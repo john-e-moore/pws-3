@@ -5,9 +5,7 @@ image: "images/tax-return-class-light.png"
 ---
 
 ## Introduction
-At our economic consulting firm, one of the things we do is ballpark the fiscal effects of income tax policy changes. A lot of these tasks rhyme---instead of whipping up Excel sheets or Python scripts a la carte, it pays to set up some infrastructure. Primarily, two things: a way to quickly query income tax data, and a way to run simulations with changeable parameters.
-
-I want to use this post to stream-of-thought my approach so far. This is partially for selfish reasons (it is really easy to forget what you did on an old project). But I hope I can also impart on you the the reader how I approach an open-ended task like this.
+At work, one of the things we do is ballpark the fiscal effects of income tax policy changes. A lot of these tasks rhyme, and instead of whipping up Excel sheets or Python scripts a la carte, it pays to set up some infrastructure. Primarily two things: a way to quickly query income tax data, and a way to run simulations with changeable parameters. Keep in mind there are many ways to skin a cat. This is my approach so far.
 
 ## Data Ingest
 Unlike government organizations and some academic institutions, we do not have IRS microdata to work with. They sell it but unfortunately the latest data is from tax year 2015. So we use the next best thing: IRS Statistics of Income (SOI) tables. These provide aggregates grouped by dimensions like AGI bracket, filing status, state, tax line items, and more. This is what they look like:
@@ -39,7 +37,7 @@ So what should our TaxReturn class look like? Python dataclasses are pretty much
 * **Methods** are functions specific to the our class. They can modify the object's state or just perform some logic that depends on one or more of the object's attributes or properties. The main method my TaxReturn class has is compute_income_tax_amount(self, rate_schedule). It could be a property, but (1) it fetches the tax rate schedule from elsewhere and (2) it is a relatively expensive computation; I don't want it to happen every time I create a TaxReturn.
 
 ## Simulation
-Now with our powerful TaxReturn class we can look at all kinds of tax policy changes! Let's say we want to look at raising the top marginal tax rate to 50%. The basic flow is:
+Now with our powerful TaxReturn class we can look at all kinds of tax policy changes. Let's say we want to look at raising the top marginal tax rate to 50%. The basic flow is:
 
 1. Make two dictionaries, one holding the original tax rate schedule and one holding a copy but with the top marginal rate at 50%.
 2. Make an empty list or dictionary to store results.
