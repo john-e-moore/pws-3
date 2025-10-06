@@ -93,6 +93,8 @@ Once the agent generates a specification, read it over to make sure it’s exact
 #### Work plan (agent)
 This one is easy — ask the agent to turn the specification into a step-by-step work plan and write it to `agent/work-plan.md`. A major key to keeping AI agents on track is giving them rules and plans to refer back to.
 
+![IDE](/blog_posts/tech/images/agent-ide.png)
+
 ### Version Control / Git
 A comprehensive overview of Git (or version control system of your choice) is outside the scope of this article, but there are a couple of important things to mention. The difficult part of coding with an AI agent is making sure it colors inside the lines. Git is very important here. 
 
