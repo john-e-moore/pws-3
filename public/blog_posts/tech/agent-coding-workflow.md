@@ -73,7 +73,7 @@ implementation_steps:
  - Write code and tests for a single step in the work plan.
  - Run code and tests.
  - Review logs and diagnostic output; ask yourself if these make sense given the spec and work plan.
- - If you identify a mistake, try to diagnose and fix it. If you cannot, or if the task is too ambiguous, stop working and explain the issue. 
+ - If you identify a mistake, try to diagnose and fix it. If you can't, or if the task is too ambiguous, stop working and explain the issue. 
  - Once a step is complete, allow me to review code and commit before we move to the next step.
 ```
 
@@ -83,11 +83,9 @@ For the prompt for the project itself, I put this right inside the agent directo
 
 You’ll have the agent extend this prompt into a formal specification. For example,
 
-```
-Below I will describe a project that I want to code. Consider my description and the other files in the agent directory, and create a specification for the project. Write it to `agent/spec.md`.
+> "Below I will describe a project that I want to code. Consider my description and the other files in the agent directory, and create a specification for the project. Write it to `agent/spec.md`.
 
-I want to create a tic-tac-toe game except it’s on a 5x5 board instead of 3x3. I want it to have a graphical interface. When one player wins, animate the winning squares. …
-```
+>I want to create a tic-tac-toe game except it’s on a 5x5 board instead of 3x3. I want it to have a graphical interface. When one player wins, animate the winning squares. …"
 
 #### Specification (agent)
 Once the agent generates a specification, read it over to make sure it’s exactly what you want. If it isn’t, change it yourself or instruct the agent to. The spec should include stuff from your YAML files like testing framework, acceptance criteria, various details.
