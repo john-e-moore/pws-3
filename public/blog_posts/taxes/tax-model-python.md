@@ -1,7 +1,7 @@
 ---
 title: "Modeling Income Tax Policy Changes with Python"
 date: "2025-04-08"
-image: "images/tax-return-class-light.png" 
+image: "images/tax-model-python.png" 
 ---
 
 ## Introduction
@@ -35,6 +35,8 @@ So what should our TaxReturn class look like? Python dataclasses are pretty much
 * **Attributes** store the variables that hold the object's state. AGI, filing status, and tax year are things you'd want to define as attributes.
 * **Properties** provide computed values based on attributes. Unlike methods, they are computed when the object is instantiated. Combined income and taxable income are examples of properties.
 * **Methods** are functions specific to the our class. They can modify the object's state or just perform some logic that depends on one or more of the object's attributes or properties. The main method my TaxReturn class has is compute_income_tax_amount(self, rate_schedule). It could be a property, but (1) it fetches the tax rate schedule from elsewhere and (2) it is a relatively expensive computation; I don't want it to happen every time I create a TaxReturn.
+
+![Class](/blog_posts/taxes/images/tax-return-class-light.png)
 
 ## Simulation
 Now with our powerful TaxReturn class we can look at all kinds of tax policy changes. Let's say we want to look at raising the top marginal tax rate to 50%. The basic flow is:
