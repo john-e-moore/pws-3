@@ -14,10 +14,10 @@ Benefits are taxed based on combined income (adjusted gross income + nontaxable 
 
 I can't take credit for this idea, but I did help quantify the effect. That idea is to **raise the income threshold for taxation of benefits.** It's a progressive policy in the technical sense, meaning it benefits the poor more than the rich. It sounds great to voters. And it gives the administration a win on this issue.
 
-![Table](/blog_posts/taxes/images/changing-thresholds-table.png)
+![Table](/blog_posts/econ/images/changing-thresholds-table.png)
 
-What is the hit to the trust fund? After some number crunching using [the stuff we set up in my previous post](/blog/taxes/tax-model-python) we found this:
+What is the hit to the trust fund? After some number crunching using [the stuff we set up in my previous post](/blog/econ/tax-model-python) we found this:
 
-![Chart](/blog_posts/taxes/images/changing-thresholds-chart.png)
+![Chart](/blog_posts/econ/images/changing-thresholds-chart.png)
 
 An 11.5% reduction in revenue from benefits, and it all goes back to beneficiaries with AGI's in the 5-figures. 

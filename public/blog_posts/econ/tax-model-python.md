@@ -10,7 +10,7 @@ At work, one of the things we do is ballpark the fiscal effects of income tax po
 ## Data Ingest
 Unlike government organizations and some academic institutions, we do not have IRS microdata to work with. They sell it but unfortunately the latest data is from tax year 2015. So we use the next best thing: IRS Statistics of Income (SOI) tables. These provide aggregates grouped by dimensions like AGI bracket, filing status, state, tax line items, and more. This is what they look like:
 
-![SOI](/blog_posts/taxes/images/soi-table-example.png)
+![SOI](/blog_posts/econ/images/soi-table-example.png)
 [Link: IRS SOI tables](https://www.irs.gov/statistics/soi-tax-stats-individual-statistical-tables-by-size-of-adjusted-gross-income)
 
 One table per tax year per dimensional split. For instance, this table is tax year 2022 tax items grouped by AGI bracket and filing status. There's another table for 2022 tax items by AGI bracket and state, and another for itemized deductions grouped by just filing status, etc.
@@ -36,7 +36,7 @@ So what should our TaxReturn class look like? Python dataclasses are pretty much
 * **Properties** provide computed values based on attributes. Unlike methods, they are computed when the object is instantiated. Combined income and taxable income are examples of properties.
 * **Methods** are functions specific to the our class. They can modify the object's state or just perform some logic that depends on one or more of the object's attributes or properties. The main method my TaxReturn class has is compute_income_tax_amount(self, rate_schedule). It could be a property, but (1) it fetches the tax rate schedule from elsewhere and (2) it is a relatively expensive computation; I don't want it to happen every time I create a TaxReturn.
 
-![Class](/blog_posts/taxes/images/tax-return-class-light.png)
+![Class](/blog_posts/econ/images/tax-return-class-light.png)
 
 ## Simulation
 Now with our powerful TaxReturn class we can look at all kinds of tax policy changes. Let's say we want to look at raising the top marginal tax rate to 50%. The basic flow is:
