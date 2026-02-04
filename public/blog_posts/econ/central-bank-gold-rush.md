@@ -1,7 +1,7 @@
 ---
 title: "The Central Bank Gold Rush"
 date: "2026-02-02"
-image: "images/gold-dollar-scale.png" 
+image: "images/gold-dollar-scale-impressionist.png" 
 ---
 
 At my day job, every weekday we send out a short piece with our view on a macroeconomic or geopolitical topic in the current news cycle. I wanted to share this draft—researched and written on November 11, 2025—after we saw a fast gold selloff the final two days of January, 2026. Allow me my quick victory lap before the market inevitably reminds me I don't know everything. 
