@@ -4,6 +4,9 @@ date: "2025-10-06"
 image: "images/agent-meme.png" 
 ---
 
+### 2026-03-20 Update
+This piece quickly became out of date with the rapid evolution of the agentic coding meta. Plan mode, Codex, setting agents loose in the cloud, etc. Use it as a window into the past :]
+
 ## Introduction
 I don’t think I have hand written a line of code in the past two months. When I started using large language models (LLMs; what many refer to as AI broadly) as part of my coding workflow, I would have my code editor on one side of the screen and a browser with ChatGPT on the other. I would think about what I wanted my program to do, bounce my ideas off the AI, and have it draft some code. Often I would end up taking or leaving its ideas and write much of the code myself. Now? I am fully in the matrix, perhaps never to return.
 
